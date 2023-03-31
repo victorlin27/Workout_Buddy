@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div class ='list'>
+            <a href="/add_workout">Add Workout</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/clear_session">Logout</a>
+        </div>
+    </div>
+    <h1>{{one_workout.workout_name}}</h1>
+    <p>Posted by:{{one_workout.user.first_name}} {{one_workout.user.last_name}}  </p>
+    <p >Desciption:</p>
+    <p class="indent">{{one_workout.description}}</p>
+</body>
+</html>
